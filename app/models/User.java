@@ -39,4 +39,7 @@ public class User extends Model {
 	public void setTweets(List<Tweet> tweets) {
 		this.tweets = tweets;
 	}
+	public String getTwitterURL(){
+		return "http://twitter.com/" + getTwitterHandle();
+	}
 }

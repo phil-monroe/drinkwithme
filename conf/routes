@@ -6,6 +6,10 @@
 GET     /                                       TweetsController.index
 GET		/users									UsersController.index
 GET		/updateTweets							TweetsController.updateTweets
+GET		/clearTweets							TweetsController.clearTweets
+
+GET		/whosDrinking							Application.whosDrinking
+GET		/whosDrinking.json						Application.whosDrinkingJSON
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

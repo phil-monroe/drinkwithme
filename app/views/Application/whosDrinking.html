@@ -1,0 +1,13 @@
+#{list users, as:'user'}
+#{if user.tweets.size() > 0}
+<div class="drink-with-me-user">
+	<h1><a href="${user.getTwitterURL()}">@${user.twitterHandle}</a></h1>
+	<ul>
+		#{list user.tweets, as:'tweet'}
+			<li>${tweet.createdAt} - ${tweet.body}</li>
+		#{/list}
+	</ul>
+</div>
+#{/if}
+#{/list}
+</table>

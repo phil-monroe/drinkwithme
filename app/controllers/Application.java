@@ -49,5 +49,24 @@ public class Application extends Controller {
 	//     public static void index() {
 	//         render();
 	//     }
+	
+	public static void whosDrinkingJSON(){
+		List<User> users = User.findAll();
+		HashMap<String, List<String>> whosDrinking = new HashMap<String, List<String>>();
+		for(User user : users){
+			List<String> tweets = new ArrayList<String>();
+			for(Tweet tweet : user.getTweets()){
+				tweets.add(tweet.getBody());
+			}
+			if(tweets.size() > 0){
+				whosDrinking.put(user.getTwitterHandle(), tweets);
+			}
+		}
+		renderJSON(whosDrinking);
+	}
 
+	public static void whosDrinking(){
+		List<User> users = User.findAll();
+		render(users);
+	}
 }

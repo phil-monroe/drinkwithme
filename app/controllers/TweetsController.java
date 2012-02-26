@@ -143,4 +143,11 @@ public class TweetsController extends Controller{
 		}
 	}
 	
+	public static void clearTweets(){
+		List<Tweet> tweets = Tweet.findAll();
+		for(Tweet tweet : tweets){
+			tweet.delete();
+		}
+	}
+	
 }

@@ -1,7 +1,16 @@
-User(1):
-   name:    Phil Monroe
-   twitterHandle:  philmonroe
-   
-User(2):
-   name:    RBSavvy
-   twitterHandle:  rbsavvy
+User(user1):
+   name:          Phil Monroe
+   twitterHandle: philmonroe
+User(user2):
+   name:          RBSavvy
+   twitterHandle: rbsavvy
+Tweet(tweet1):
+   body:       "#drinkwithme in SF"
+   createdAt:  2012-02-26 1:10:00
+   statusCode: 200
+   user:       user1
+Tweet(tweet2):
+   body:       "#drinkwithme in Davis"
+   createdAt:  2012-02-26 1:10:00
+   statusCode: 200
+   user:       user1
