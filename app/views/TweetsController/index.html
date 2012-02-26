@@ -1,0 +1,26 @@
+<html>
+<head>
+	<link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet"/>
+</head>
+
+<body>
+    
+<div class="container">
+	<div class="page-header">
+		<h1>Tweets</h1>
+	</div>
+	
+	<table class="table table-bordered table-striped">
+	<tr><th>id</th><th>time</th><th>author</th><th>body</th></tr>
+	#{list tweets, as:'tweet'}
+		<tr>
+			<td><a href="/tweets/${tweet.id}/followUp">${tweet.id}</a>
+			<td>${tweet.createdAt}</td>
+			<td>${tweet.author}</td>
+			<td>${tweet.body}</td>
+		</tr>
+	#{/list}
+	</table>
+</div>
+</body>
+</html>

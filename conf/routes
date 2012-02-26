@@ -3,7 +3,9 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.index
+GET     /                                       TweetsController.index
+GET		/users									UsersController.index
+GET		/updateTweets							TweetsController.updateTweets
 
 # Ignore favicon requests
 GET     /favicon.ico                            404
